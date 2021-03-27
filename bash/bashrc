@@ -98,6 +98,8 @@ alias more=less
 alias sshtim='ssh -L 22000:localhost:22000 -L 22001:localhost:22001 -L 22010:localhost:22010 -L 22011:localhost:22011 -L 22021:localhost:22021 -L 22022:localhost:22022 -L 22023:localhost:22023 -L 22024:localhost:22024 -L 22025:localhost:22025 -L 22026:localhost:22026 -L 22027:localhost:22027 -L 22028:localhost:22028 -L 22029:localhost:22029 -L 22031:localhost:22031 -L 22032:localhost:22032 nicolas@10.0.0.69'
 alias sshclaro='ssh -L 20000:localhost:20000 -L 20001:localhost:20001 -L 20010:localhost:20010 -L 20011:localhost:20011 -L 20020:localhost:20020 -L 20021:localhost:20021 nicolas@10.0.0.69'
 alias sshdev='ssh nicolas@10.0.0.69'
+alias encrpyt='gpg -c --no-symkey-cache --cipher-algo AES256'
+alias decrypt='gpg'
 
 xhost +local:root > /dev/null 2>&1
 
