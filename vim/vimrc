@@ -1,0 +1,14 @@
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
+
+syntax enable
+
+set shiftwidth=4
+set smartindent
+set softtabstop=4
+set incsearch " search as ch gets entered
+"set hlsearch " highlights
+set backspace=indent,eol,start
+
+nnoremap H gT
+nnoremap L gt
