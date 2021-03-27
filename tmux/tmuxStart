@@ -1,0 +1,27 @@
+#!/bin/bash
+
+SESSION_TYPE=$1
+
+if [ -z $SESSION_TYPE ];
+then
+    echo "Please provide a session type!";
+    exit 0
+elif [ "$SESSION_TYPE" != "work" ] && [ "$SESSION_TYPE" != "personal" ];
+then
+    echo "Invalid session type!"
+    echo "Currently supported: work, personal"
+    exit 0 
+fi
+
+if [ "$SESSION_TYPE" = "work" ];
+then
+    /usr/bin/tmux	 new		-s	'nicolas'		-n	'DEV'		-d	
+    /usr/bin/tmux	 new-window	-n	'TIM'			-t	'nicolas'
+    /usr/bin/tmux	 new-window	-n	'CLARO'			-t	'nicolas'	
+    /usr/bin/tmux	 new-window	-n	'LOCAL'			-t	'nicolas'
+elif [ "$SESSION_TYPE" = "personal" ];
+then
+    /usr/bin/tmux	 new		-s	'nicolas'		-n	'DEV'		-d	
+fi
+
+/usr/bin/tmux		a						-t	'nicolas'\; select-window -t 'DEV' 
